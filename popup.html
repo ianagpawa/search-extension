@@ -5,14 +5,39 @@
         <meta name="author" content="Ian Agpawa">
         <meta name="description" content="Chrome Extension">
         <title>Google Search Extension</title>
+        <style>
+            body{
+                min-width: 400px;
+                min-height: 75px;
+            }
+
+            #input-div{
+                padding-left: 90px;
+            }
+            #search-title,
+            #search-h4{
+                text-align: center;
+            }
+            #list{
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                padding-left: 17px;
+            }
+            .list-result{
+                padding-top: 7px;
+            }
+        </style>
         <script src="popup.js"></script>
     </head>
     <body>
-        <div>
-            <h2>Google Search</h2>
-            <input type='text' name='search-text' id='search' placeholder='Search'><br>
+        <h2 id='search-title'>Google Search</h2>
+        <div id='input-div'>
+            <input type='text' name='search-text' id='search' placeholder='Search'>
             <button id='submit' type='button'>Submit</button>
         </div>
-        <ol id='results'></ol>
+        <div id='results'></div>
+
+
     </body>
 </html>

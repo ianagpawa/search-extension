@@ -10,8 +10,7 @@
 1.  Open `chrome//:extensions` in the Chrome browser.
 2.  Ensure `Developer Mode` is enabled (located at the top).
 3.  Click `Load unpacked extension` and navigate the directory to the location of this project folder on your file system.  
-4.  The new extension icon should appear on browser nav bar.  
-
+4.  The new extension icon will appear on browser nav bar.  
 
 ### What's Included
 Within the project folder, you will find the following files:

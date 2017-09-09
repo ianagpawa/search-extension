@@ -9,16 +9,17 @@ document.addEventListener('DOMContentLoaded', function() {
         xml.onreadystatechange = function () {
             var xmlDoc = xml.response;
             var results = xmlDoc.getElementsByClassName("r");
-            var display = "";
+            var display = "<h4 id='search-h4'>Search results for "+ searchTerm + "</h4><ol id='list'>";
             for (var i = 0; i < results.length; i++) {
                 var child = results[i].childNodes[0]
                 var text = results[i].childNodes[0].childNodes[0].nodeValue;
                 var link = results[i].childNodes[0].getAttribute('href')
                 if ( text !== null ) {
-                    display += "<li><a href='" + link + "' target='_blank'>" + text + "</a></li>"
+                    display += "<li class='list-result'><a href='" + link + "' target='_blank'>" + text + "</a></li>"
                     // display += text
                 }
             }
+            display += "</ol>"
 
             document.getElementById('results').innerHTML = display;
         }
